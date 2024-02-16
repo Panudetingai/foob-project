@@ -1,0 +1,134 @@
+<app-navbar></app-navbar> <app-slider></app-slider>
+<div class="card-sale-price mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 my-12">
+  <p class="font-Archivo font-bold text-2xl">Food discount</p>
+  <app-card></app-card>
+</div>
+
+<div class="work mx-auto max-w-7xl px-2 sm:px-6 lg:px-8l my-5">
+  <p class="text-center font-Archivo text-2xl text-orange-400 font-bold">
+    How does it work
+  </p>
+  <div
+    class="work-contact grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-3 justify-items-center my-10"
+  >
+    <div class="work-card flex justify-center flex-col items-center w-52">
+      <img src="/assets/image/work1.png" class="sm:w-32 max-sm:w-24" alt="" />
+      <p class="font-bold text-base">Select location</p>
+      <p class="text-center text-slate-300">
+        Choose the location where your food will be delivered.
+      </p>
+    </div>
+    <div class="work-card flex justify-center flex-col items-center w-52">
+      <img src="/assets/image/work2.png" class="sm:w-32 max-sm:w-24" alt="" />
+      <p class="font-bold text-base">Select location</p>
+      <p class="text-center text-slate-300">
+        Choose the location where your food will be delivered.
+      </p>
+    </div>
+    <div class="work-card flex justify-center flex-col items-center w-52">
+      <img src="/assets/image/work3.png" class="sm:w-32 max-sm:w-24" alt="" />
+      <p class="font-bold text-base">Select location</p>
+      <p class="text-center text-slate-300">
+        Choose the location where your food will be delivered.
+      </p>
+    </div>
+    <div class="work-card flex justify-center flex-col items-center w-52">
+      <img src="/assets/image/work4.png" class="sm:w-36 max-sm:w-24" alt="" />
+      <p class="font-bold sm:text-base">Select location</p>
+      <p class="text-center text-slate-300" style="margin: 0">
+        Choose the location where your food will be delivered.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- foob product show -->
+<div class="mx-auto max-w-7xl px-2 sm:2px-6 lg:px-8l my-5">
+  <div class="title">
+    <p class="text-2xl font-Archivo font-bold">Food Hot</p>
+  </div>
+  <div class="menu-food w-full my-5">
+    <ul class="flex items-center w-full">
+      <select
+        name=""
+        id=""
+        class="w-32 outline-none border px-1 py-2 rounded-md"
+      >
+        <option value="" disabled>Category</option>
+        <option value="">All</option>
+        <option value=""></option>
+      </select>
+      <li class="mx-4">
+        <button class="bg-black text-white rounded-full px-4 py-2">
+          Snack
+        </button>
+      </li>
+      <li class="mx-4">
+        <button class="bg-black text-white rounded-full px-4 py-2">
+          Dessert
+        </button>
+      </li>
+      <li class="mx-4">
+        <button class="bg-black text-white rounded-full px-4 py-2">
+          Drink
+        </button>
+      </li>
+    </ul>
+  </div>
+  <div class="lg:grid grid-cols-4 gap-5 my-12">
+    <div
+      class="card-food w-[250px] rounded-md overflow-hidden bg-white shadow-md relative hover:-translate-y-5 duration-150 ease-in"
+      *ngFor="let food of foodarray"
+    >
+      <div class="card-body h-[200px] overflow-hidden">
+        <img
+          src="{{ food.food_image }}"
+          width="100%"
+          height="100%"
+          class="object-cover"
+          alt=""
+        />
+        <div class="discount absolute top-0 flex justify-between w-full">
+          <p class="bg-orange-500 text-white px-4 py-1">
+            -{{ food.discount }}%
+          </p>
+          <mat-icon class="text-red-500 m-1">favorite</mat-icon>
+        </div>
+      </div>
+      <div class="card-content px-3 py-2">
+        <div class="head flex justify-between">
+          <div class="">
+            <p class="font-Archivo font-bold text-lg" style="margin: 0">
+              {{ food.food_name }}
+            </p>
+            <div class="review flex items-center">
+              <p style="margin: 0">Review {{food.review}}</p>
+              <mat-icon class="text-sm text-yellow-300">star</mat-icon>
+            </div>
+          </div>
+          <div class="price">
+            <p class="font-Archivo text-orange-400 text-xl" style="margin: 0">
+              200$
+            </p>
+            <div class="price-discount relative items-center">
+              <span class="bg-slate-300 w-8 h-[2px] absolute top-2.5"></span>
+              <p class="text-slate-300">250$</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer px-3 py-2">
+        <button
+          class="btn w-full py-3 px-3 bg-black text-white rounded-md hover:bg-slate-800 duration-100"
+        >
+          Sign in
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- about -->
+<div class="about mx-auto max-w-3xl px-2 sm:px-6 lg:px-8l my-5 flex justify-center items-center" id="about">
+  
+</div>
